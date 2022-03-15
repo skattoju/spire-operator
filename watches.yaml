@@ -1,0 +1,6 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: spire.spiffe.io
+  version: v1alpha1
+  kind: Spire
+  chart: helm-charts/spire
+#+kubebuilder:scaffold:watch

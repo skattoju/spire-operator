@@ -1,0 +1,25 @@
+apiVersion: spire.spiffe.io/v1alpha1
+kind: Spire
+metadata:
+  name: spire-sample
+spec:
+  # Default values copied from <project_dir>/helm-charts/spire/values.yaml
+  config:
+    agent:
+      clusterName: demo-cluster
+      image:
+        repository: gcr.io/spiffe-io/spire-agent
+        tag: 0.10.0
+    server:
+      bindAddress: 0.0.0.0
+      image:
+        repository: gcr.io/spiffe-io/spire-server
+        tag: 0.10.0
+      plugins:
+        noteAttestor:
+          clusterName: demo-cluster
+      port: 8081
+      replicas: 1
+    trustDomain: example.org
+  
+  

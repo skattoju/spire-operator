@@ -13,3 +13,10 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+bin
+
+# editor and IDE paraphernalia
+.idea
+*.swp
+*.swo
+*~
